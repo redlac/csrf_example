@@ -1,0 +1,20 @@
+<!-- For demonstration purposes only -->
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Steal Username</title>
+    </head>
+    <body>
+        <h1 id="username"></h1>
+        
+        
+        <script type="text/javascript">
+           var header = document.getElementById('username');
+           var location = window.location.href;
+           var url = new URL(location);
+           var username = url.searchParams.get("username");
+           header.innerText = username;
+        </script>
+    </body>
+</html>
